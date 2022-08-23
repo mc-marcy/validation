@@ -1,8 +1,7 @@
 #!/bin/bash 
 
 sudo cat /etc/os-release
-sudo dnf -y install yum
-sudo yum install -y awscli
+sudo apt install -y awscli
 EC2_INSTANCE=aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
 
 #connect to the server and install docker 20.10
