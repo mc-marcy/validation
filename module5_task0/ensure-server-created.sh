@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 AMI=ami-05fa00d4c63e32376
-SG=sg-0e62b8c1144bfd1c6
+SG=awesome-sg
 
 instance=$(aws ec2 describe-instances \
 --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,Type:InstanceType,Name:Tags[?Key=='Name']|[0].Value,Status:State.Name}" \
