@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-AMI=ami-05fa00d4c63e32376
+AMI=ami-052efd3df9dad4825
 SG=awesome-sg
 
 instance=$(aws ec2 describe-instances \
