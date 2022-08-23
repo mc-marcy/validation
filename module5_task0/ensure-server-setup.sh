@@ -4,6 +4,6 @@ sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2
 sudo unzip -o awscliv2.zip
 sudo ./aws/install
 
-#EC2_INSTANCE=aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
-ssh ec2-user@localhost
+EC2_INSTANCE=aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
+ssh ubuntu@"$EC2_INSTANCE"
 
