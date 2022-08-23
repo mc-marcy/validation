@@ -7,5 +7,5 @@ sudo unzip awscliv2.zip
 sudo ./aws/install
 
 EC2_INSTANCE=aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
-ssh ec2-user@$EC2_INSTANCE uname
+ssh ec2-user@"$EC2_INSTANCE uname"
 
