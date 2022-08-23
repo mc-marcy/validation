@@ -11,7 +11,7 @@ instance=$(aws ec2 describe-instances \
 if [ -z "$instance" ]
 then
   echo "no ec2 instances of type t3.micro is running in us-east-1"
-  aws ec2 run-instances --image-id $AMI --count 1 --instance-type t3.micro --key-name awesome-key  --security-group-ids $SG  --subnet-id subnet-a7cebaab 
+  aws ec2 run-instances --image-id $AMI --count 1 --instance-type t3.micro --key-name awesome-key  --security-group-ids $SG  --subnet-id subnet-00187e2c
   aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
 else 
   echo "ec2 instances of type t3.micro is running in us-east-1"
