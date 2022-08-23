@@ -1,7 +1,7 @@
 #!/bin/bash 
 sudo apt-get install -y unzip
 sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2.zip
-sudo unzip awscliv2.zip
+sudo unzip -o awscliv2.zip -y
 sudo ./aws/install
 
 #EC2_INSTANCE=aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
