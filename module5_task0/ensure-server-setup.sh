@@ -17,4 +17,5 @@ ssh ubuntu@"$EC2_INSTANCE" << "EOF"
 
    sudo systemctl start docker
    sudo usermod -aG docker ubuntu
+   echo OK
 EOF
