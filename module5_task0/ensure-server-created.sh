@@ -16,5 +16,5 @@ then
   
 else 
   echo "ec2 instances of type t3.micro is running in us-east-1"
-  aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
+  #aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
 fi
