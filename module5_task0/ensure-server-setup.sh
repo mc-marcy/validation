@@ -4,7 +4,7 @@ EC2_INSTANCE=$(aws ec2 describe-instances --query "Reservations[].Instances[].Pu
 #sudo mkdir -p /etc/apt/keyrings
 #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-ssh ubuntu@"$EC2_INSTANCE" << EOF
+ssh ubuntu@"$EC2_INSTANCE" << "EOF"
    sudo apt-get update
    sudo apt-get -y install ca-certificates curl gnupg lsb-release
 
