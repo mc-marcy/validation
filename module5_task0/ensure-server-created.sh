@@ -13,6 +13,7 @@ then
   #echo "no ec2 instances of type t3.micro is running in us-east-1"
   aws ec2 run-instances --image-id $AMI --count 1 --instance-type t3.micro --key-name awesome-key  --security-group-ids $SG 2>/dev/null 1>&2
   #aws ec2 describe-instances --query "Reservations[].Instances[].PublicDnsName"
+  return OK
   
 else 
   echo "ec2 instances of type t3.micro is running in us-east-1"
